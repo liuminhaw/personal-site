@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Montserrat';
+    color: #272727;
+}
+
+h1 {
+    font-family: 'Sacramento';
+    font-weight: 400;
+    font-size: 2.6rem;
+    color: #50d890;
+}
+
+h2 {
+    /* font-weight: 400; */
+    color: #4f98ca;
+    font-size: 2rem;
+    padding-bottom: 10px;
+}
+
+h4 {
+    margin-bottom: 10px;
+}
+
+p {
+    color: #272727;
+}
+
+hr {
+    border: dotted #50d890 7px;
+    /* border: dotted #effffb 8px; */
+    border-bottom: none;
+    width: 2%;
+    margin: 60px auto;
+    clear: both;
+}
+
+.top-container {
+    background-color: #effffb;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+.middle-container {
+    margin: 60px 0;
+}
+
+.intro {
+    width: 40%;
+    margin: auto;
+}
+
+.certificates {
+    width: 40%;
+    margin: auto;
+}
+
+.cert-row {
+    text-align: left;
+    margin-bottom: 100px;
+}
+
+.rhce-img {
+    float: left;
+    width: 30%;
+    margin-right: 30px;
+}
+
+.rhcsa-img {
+    float: left;
+    width: 30%;
+    margin-right: 30px;
+}
+
+.aws-img {
+    float: right;
+    width: 25%;
+    margin-left: 30px;
+    margin-bottom: 60px;
+}
+
+.skills {
+    width: 30%;
+    max-width: 570px;
+    margin: auto;
+    margin-bottom: 130px;
+}
+
+.skill-row {
+    margin-bottom: 90px;
+}
+
+.skill-img {
+    float: left;
+    width: 15%;
+    max-width: 80px;
+}
+
+.community {
+    width: 40%;
+    margin: auto;
+}
+
+.community-img {
+    width: 8%;
+}
+
+.bottom-container {
+    background-color: #effffb;
+    padding: 50px 0 20px;
+}
+
+
+.bar-container {
+    float: right;
+    width: 70%;
+    background-color: #f2f6f5;
+    text-align: center;
+    color: white;
+}
+
+.copyright, .attribution {
+    font-size: 0.8rem;
+    color: #63707e;
+    line-height: 2;
+}
+
+.bar-linux {width: 80%; height: 18px; background-color: #93b5b3;}
+.bar-script {width: 80%; height: 18px; background-color: #c8dad3;}
+.bar-python {width: 80%; height: 18px; background-color: #93b5b3;}
+.bar-webdev {width: 30%; height: 18px; background-color: #c8dad3;}
