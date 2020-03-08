@@ -35,24 +35,12 @@ jobs:
   # SSH test job
   remote:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2
-      - name: Install ssh-agent
-        env:
-          _ssh_secret_key: ${{ secrets._SSH_SECRET_KEY }}
-          _ssh_host: ${{ secrets._SSH_HOST }} 
-          _ssh_user: ${{ secrets._SSH_USER }} 
-        run: |
-          which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
-          eval $(ssh-agent -s)
-          echo "$_ssh_secret_key" | tr -d '\r' | ssh-add -
-          mkdir -p ~/.ssh
-          chmod 700 ~/.ssh
-          echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-
-      - name: Add key
-        run: ssh-add <(echo "${{ secrets._SSH_SECRET_KEY }}")
-
-      - name: Test ssh
-        run: ssh ${{ secrets._SSH_USER }}@${{ secrets._SSH_HOST }} hostname
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets._SSH_HOST }}
+        username: ${{ secrets._SSH_USER }}
+        key: ${{ secrets._SSH_SECRET_KEY }}
+        # port: ${{ secrets.PORT }}
+        script: whoami
