@@ -48,6 +48,5 @@ jobs:
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
 
-    steps:
       - name: Test ssh
         run: ssh hostname
