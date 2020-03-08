@@ -52,4 +52,4 @@ jobs:
           echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
 
       - name: Test ssh
-        run: ssh ${_ssh_user}@${_ssh_host} hostname
+        run: ssh ${{ _ssh_user }}@${{ _ssh_host }} hostname
