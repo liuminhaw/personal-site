@@ -43,4 +43,4 @@ jobs:
         username: ${{ secrets._SSH_USER }}
         key: ${{ secrets._SSH_SECRET_KEY }}
         # port: ${{ secrets.PORT }}
-        script: whoami
+        script: hostname
