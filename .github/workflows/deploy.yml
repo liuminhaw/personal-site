@@ -52,7 +52,7 @@ jobs:
           echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
 
       - name: Add key
-        run: ssh-add <(echo ${{ secrets._SSH_SECRET_KEY }})
+        run: ssh-add <(echo "${{ secrets._SSH_SECRET_KEY }}")
 
       - name: Test ssh
         run: ssh ${{ secrets._SSH_USER }}@${{ secrets._SSH_HOST }} hostname
