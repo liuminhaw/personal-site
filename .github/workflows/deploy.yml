@@ -14,16 +14,16 @@ jobs:
   deploy_job:
     name: Deploy Job
     runs-on: ubuntu-latest
+    env:
+      _SSH_KEY: ${{ secrets._DEV_SSH_SECRET_KEY	}}
+      _SSH_USER: ${{ secrets._DEV_SSH_USER }}
+      _SSH_HOST: ${{ secrets._DEV_SSH_HOST }}
+      _SSH_PATH: ${{ secrets._DEV_SSH_PATH }}
+      _KNOWN_HOSTS: ${{ secrets._DEV_KNOWN_HOST }}
     steps:
     - uses: actions/checkout@v1
 
     - name: SSH setup
-      env:
-        _SSH_KEY: ${{ secrets._DEV_SSH_SECRET_KEY	}}
-        _SSH_USER: ${{ secrets._DEV_SSH_USER }}
-        _SSH_HOST: ${{ secrets._DEV_SSH_HOST }}
-        _SSH_PATH: ${{ secrets._DEV_SSH_PATH }}
-        _KNOWN_HOSTS: ${{ secrets._DEV_KNOWN_HOST }}
       run: |
         mkdir -p ~/.ssh
         echo "${{ env._KNOWN_HOSTS }}" >> ~/.ssh/known_hosts
