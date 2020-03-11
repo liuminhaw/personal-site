@@ -35,4 +35,4 @@ jobs:
     - name: rsync deploy
       run: |
         ssh ${{ env._SSH_USER }}@${{ env._SSH_HOST }} hostname
-        rsync -avz -e ssh --delete public/ ${{ env._SSH_USER }}@${{ env._SSH_HOST }}:${{ env._SSH_PATH }}/
+        rsync -avz -e ssh --delete . ${{ env._SSH_USER }}@${{ env._SSH_HOST }}:${{ env._SSH_PATH }}/
