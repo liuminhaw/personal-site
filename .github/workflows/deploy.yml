@@ -11,30 +11,27 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-    env:
-      NAME: Mona
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-
-    # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: echo ${{ env.NAME }}
-
-  # SSH test job
-  remote:
+  deploy_job:
+    name: Deploy Job
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets._DEV_SSH_HOST }}
-        username: ${{ secrets._DEV_SSH_USER }}
-        key: ${{ secrets._DEV_SSH_SECRET_KEY }}
-        # port: ${{ secrets.PORT }}
-        script: hostname
+    - uses: actions/checkout@v1
+
+    - name: SSH setup
+      env:
+        _SSH_KEY: ${{ secrets._DEV_SSH_SECRET_KEY	}}
+        _SSH_USER: ${{ secrets._DEV_SSH_USER }}
+        _SSH_HOST: ${{ secrets._DEV_SSH_HOST }}
+        _SSH_PATH: ${{ secrets._DEV_SSH_PATH }}
+        _KNOWN_HOSTS: ${{ secrets._DEV_KNOWN_HOST }}
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ env._KNOWN_HOSTS }}" >> ~/.ssh/known_hosts
+        echo "${{ env._SSH_KEY }}" > ~/.ssh/ssh_key
+        echo "IdentityFile ~/.ssh/ssh_key" >> ~/.ssh/config
+        chmod -R 700 ~/.ssh
+
+    - name: Test ssh command
+      run: |
+        rsync -avz -e ssh --delete public/ ${RSYNC_USER}@${HOST}:/var/www/
+        ssh ${{ env._SSH_USER }}@${{ env._SSH_HOST }} hostname
