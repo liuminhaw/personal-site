@@ -33,5 +33,4 @@ jobs:
 
     - name: Test ssh command
       run: |
-        rsync -avz -e ssh --delete public/ ${RSYNC_USER}@${HOST}:/var/www/
         ssh ${{ env._SSH_USER }}@${{ env._SSH_HOST }} hostname
