@@ -49,11 +49,15 @@ hr {
 .intro {
     width: 40%;
     margin: auto;
+    min-width: 460px;
+    max-width: 900px;
 }
 
 .certificates {
     width: 40%;
     margin: auto;
+    min-width: 460px;
+    max-width: 900px;
 }
 
 .cert-row {
@@ -82,9 +86,10 @@ hr {
 
 .skills {
     width: 30%;
-    max-width: 570px;
     margin: auto;
     margin-bottom: 130px;
+    min-width: 360px;
+    max-width: 570px;
 }
 
 .skill-row {
@@ -100,6 +105,8 @@ hr {
 .community {
     width: 40%;
     margin: auto;
+    min-width: 460px;
+    max-width: 900px;
 }
 
 .community-img {
