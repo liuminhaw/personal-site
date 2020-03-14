@@ -3,82 +3,100 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Haw's Personal Site</title>
+  <title>Haw's</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Sacramento&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="icon" href="favicon.ico"> -->
 </head>
 
 <body>
-  <table cellspacing="20">
-    <tr>
-      <td><img src="images/haw.png" alt="haw's profile picture"></td>
-      <td>
-        <h1>Peter Liu</h1>
-        <p><em>Cloud Engineer</em> at <strong><a href="https://www.25sprout.com/">25sprout</a></strong></p>
-        <p>An ordinary person that likes computer and sport.</p>
-      </td>
-    </tr>
-  </table>
-  <!-- <hr>
-  <h3>Recent activities</h3>
-  <ul>
-    <li>Activity here...</li>
-  </ul> -->
-  <hr>
-  <h3>Work Experience</h3>
-  <table cellspacing="10">
-    <thead>
-      <tr>
-        <th>Dates</th>
-        <th>Work</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>2018 - 2019</td>
-        <td>Cloud Assistant Enginner at TS-Cloud</td>
-      </tr>
-      <tr>
-        <td>2019 - present</td>
-        <td>Cloud Engineer at 25sprout</td>
-      </tr>
-    </tbody>
-  </table>
-  <hr>
-  <h3>Certificates</h3>
-  <table cellspacing="20">
-    <tbody>
-      <tr>
-        <td>
-          <img src="images/rhcsa.png" alt="RHCSA badge image">
-        </td>
-        <td>
-          <img src="images/rhce.png" alt="RHCE badge image">
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <hr>
-  <h3>Skills</h3>
-  <table cellspacing="10">
-    <tr>
-      <td>Linux</td>
-      <td>⭐️⭐️⭐️⭐️</td>
-    </tr>
-    <tr>
-      <td>Shell Scripts</td>
-      <td>⭐️⭐️⭐️⭐️</td>
-    </tr>
-    <tr>
-      <td>Python</td>
-      <td>⭐⭐⭐⭐</td>
-    </tr>
-    <tr>
-      <td>Web Development</td>
-      <td>⭐️⭐️</td>
-    </tr>
-  </table>
-  <hr>
-  <h4>My GitHub</h4>
-  <a href="https://github.com/liuminhaw"><img src="images/GitHub-Mark-32px.png" alt="GitHub Logo image"></a>
+  <div class="top-container">
+    <h1>Min-Haw, Liu</h1>
+  </div>
+
+  <div class="middle-container">
+    <div class="profile">
+      <img src="images/haw.png" alt="profile picture">
+      <h2>Cloud Engineer</h2>
+      <p class="intro">An ordinary person who is interested in computer and sports.</p>
+    </div>
+    <hr>
+
+    <div class="certificates">
+      <h2>Certificates</h2>
+      <div class="cert-row">
+        <a href="https://www.redhat.com/rhtapps/services/certifications/badge/verify/BWRR5QJTLZRI3EX2MT4DL3BOAMAEQU3CUPSQX2KSDXT6RW46LQ3XCZJWRJNV7ILTXVE4I6VB7OTCG4U5NQYTCNA62RUWOCM34WWBUYQ=" target="_blank">
+          <img class="rhce-img" src="images/rhce.png" alt="RHCE Certificate">
+        </a>
+        <h3>RHCE</h3>
+        <p>Red Hat Certified Engineer</p>
+      </div>
+      <div class="cert-row">
+        <a href="https://www.redhat.com/rhtapps/services/certifications/badge/verify/BWRR5QJTLZRI3EX2MT4DL3BOAMAEQU3CUPSQX2KSDXT6RW46LQ3T7ULZ55KZZ56SKO7EQ3ETTLYZQ4U5NQYTCNA62RUWOCM34WWBUYQ=" target="_blank">
+          <img class="rhcsa-img" src="images/rhcsa.png" alt="RHCSA Certificate">
+        </a>
+        <h3>RHCSA</h3>
+        <p>Red Hat Certified System Administrator</p>
+      </div>
+      <div class="cert-row">
+        <a href="https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2019-12-12&ci=AWS01186322" target="_blank">
+          <img class="aws-img" src="images/aws-badge.png" alt="aws Solution Architect Associate">
+        </a>
+        <h3>aws</h3>
+        <p>Solution Architect Associate</p>
+      </div>
+    </div>
+    <hr>
+
+    <div class="skills">
+      <h2>Skills</h2>
+      <div class="skill-row">
+        <img class="skill-img" src="images/linux.png" alt="Linux image">
+        <h4>Linux</h4>
+        <div class="bar-container">
+          <div class="bar-linux"></div>
+        </div>
+      </div>
+      <div class="skill-row">
+        <img class="skill-img" src="images/shell-script.png" alt="shell script image">
+        <h4>Shell script</h4>
+        <div class="bar-container">
+          <div class="bar-script"></div>
+        </div>
+      </div>
+      <div class="skill-row">
+        <img class="skill-img" src="images/python.png" alt="python image">
+        <h4>Python</h4>
+        <div class="bar-container">
+          <div class="bar-python"></div>
+        </div>
+      </div>
+      <div class="skill-row">
+        <img class="skill-img" src="images/development.png" alt="development image">
+        <h4>Web Development</h4>
+        <div class="bar-container">
+          <div class="bar-webdev"></div>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <div class="community">
+      <h2>Follow Me</h2>
+      <a href="https://github.com/liuminhaw" target="_blank">
+        <img class="community-img" src="images/github.png" alt="github image">
+      </a>
+      <h3>GitHub</h3>
+    </div>
+
+  </div>
+  <div class="bottom-container">
+    <p class="attribution">Icons made by Freepik from www.flaticon.com</p>
+    <p class="copyright">© 2020 Min-Haw, Liu.</p>
+  </div>
+
 </body>
 
 </html>
