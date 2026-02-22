@@ -1,102 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Haw's</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat|Sacramento&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- <link rel="icon" href="favicon.ico"> -->
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Haw's</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Sacramento&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- <link rel="icon" href="favicon.ico"> -->
-</head>
-
-<body>
-  <div class="top-container">
-    <h1>Min-Haw, Liu</h1>
-  </div>
-
-  <div class="middle-container">
-    <div class="profile">
-      <img src="images/haw.png" alt="profile picture">
-      <h2>Cloud Engineer</h2>
-      <p class="intro">An ordinary person who is interested in computer and sports.</p>
+  <body>
+    <div class="top-container">
+      <h1>Min-Haw, Liu</h1>
     </div>
-    <hr>
 
-    <div class="certificates">
-      <h2>Certificates</h2>
-      <div class="cert-row">
-        <a href="https://www.redhat.com/rhtapps/services/certifications/badge/verify/BWRR5QJTLZRI3EX2MT4DL3BOAMAEQU3CUPSQX2KSDXT6RW46LQ3XCZJWRJNV7ILTXVE4I6VB7OTCG4U5NQYTCNA62RUWOCM34WWBUYQ=" target="_blank">
-          <img class="rhce-img" src="images/rhce.png" alt="RHCE Certificate">
+    <div class="middle-container">
+      <div class="profile">
+        <img src="images/haw.png" alt="profile picture" />
+        <h2>About Me</h2>
+        <!-- <p class="intro"> -->
+        <!--     Hi I'm Haw, here is some information about me -->
+        <!-- </p> -->
+        <ul>
+          <li>
+            Work as a DevOps Engineer and Site Reliability Engineer for living.
+          </li>
+          <li>Got into the Linux because terminal is so cool</li>
+          <li>Got into neovim because I can't get out.</li>
+          <li>
+            Love to build stuff in my spare time, it's just fun.
+          </li>
+          <li>Interested in badminton, comics, and delicious foods</li>
+          <li>Swims a lot recently</li>
+        </ul>
+      </div>
+      <hr />
+
+      <div class="work-experience">
+        <h2>Work Experience</h2>
+        <h3>Cloud Engineer / Site Reliability Engineer</h3>
+        <p>25sprout LLC</p>
+        <p>June 2019 - Feb 2025</p>
+        <hr class="hr-line" />
+        <h3>Linux Server Assistant Engineer</h3>
+        <p>TS CLOUD PTE. LTD</p>
+        <p>November 2018 - May 2019</p>
+        <hr class="hr-line" />
+        <h3>Control Engineer</h3>
+        <p>Reciprocal PHI Design Inc</p>
+        <p>April 2018 - November 2018</p>
+        <hr class="hr-line" />
+        <h4>Resume</h4>
+        <p>
+          <a href="assets/resume-en.pdf" target="_blank" class="resume"
+            >English Resume (PDF)</a
+          >
+        </p>
+        <p>
+          <a href="assets/resume-ch.pdf" target="_blank" class="resume"
+            >Chinese Resume (PDF)</a
+          >
+        </p>
+      </div>
+      <hr />
+
+      <div class="side-projects">
+        <h2>Side Projects</h2>
+        <div>
+          <h3 class="side-project-heading">
+            <span class="heading-deco">[</span>
+            <a href="https://mthc.lmhaw.dev">mthc</a>
+            <span class="heading-deco">]</span>
+          </h3>
+          <p>A Markdown-to-HTML converter written in C</p>
+        </div>
+        <hr class="hr-line" />
+        <div>
+          <h3 class="side-project-heading">
+            <span class="heading-deco">[</span>
+            <a href="https://wrenderer.lmhaw.dev">wrenderer</a>
+            <span class="heading-deco">]</span>
+          </h3>
+          <p>
+            A web rendering tool designed for SEO purposes and for serving
+            proper content to bots that cannot execute JavaScript in client-side
+            rendered application
+          </p>
+          <h4>Related links</h4>
+          <p><a href="https://github.com/liuminhaw/renderer">renderer</a> - module for rendering webpage content and pdf</p>
+          <p><a href="https://github.com/liuminhaw/sitemapHelper">sitemapHelper</a> - module for parsing and generating sitemap</p>
+        </div>
+        <hr class="hr-line" />
+        <div>
+          <h3 class="side-project-heading">
+            <span class="heading-deco">[</span>
+            <a href="https://github.com/liuminhaw/MSiBTY">MSiBTY</a>
+            <span class="heading-deco">]</span>
+          </h3>
+          <p>A set of automation scripts for setting up my laptop environments</p>
+          <p>Stands for "My Setup is Better Than Yours"</p>
+        </div>
+        <hr class="hr-line" />
+        <div>
+          <h3 class="side-project-heading">
+            <span class="heading-deco">[</span>
+            <a href="https://github.com/liuminhaw/wrestic-bkp">wrestic-bkp</a>
+            <span class="heading-deco">]</span>
+          </h3>
+          <p>A wrapper I tried to make for executing <a href=""https://restic.net/>restic</a> using configuration file setting.</p>
+          <p>
+            This supports just few of the features of restic that meet my usage. 
+            <a href="https://github.com/creativeprojects/resticprofile">resticprofile</a> 
+            is the one that is far more complete and should be use instead.
+          </p>
+        </div>
+        <hr class="hr-line" />
+        <div>
+          <h3 class="side-project-heading">
+            <span class="heading-deco">[</span>
+            Small Scripts
+            <span class="heading-deco">]</span>
+          </h3>
+          <p>
+            <a href="https://github.com/liuminhaw/md-toc">md-toc</a><br />
+            The script extract and output table of content from a given markdown input
+          </p> 
+          <p>
+            <a href="https://github.com/liuminhaw/apollo-bot">apollo-bot</a><br />
+            The script request for re-checkin on apollo hr system automatically
+          </p>
+        </div>
+      </div>
+      <hr />
+
+      <div class="community">
+        <h2>Follow Me</h2>
+        <a href="https://github.com/liuminhaw" target="_blank">
+          <img
+            class="community-img"
+            src="images/github.png"
+            alt="github image"
+          />
         </a>
-        <h3>RHCE</h3>
-        <p>Red Hat Certified Engineer</p>
-      </div>
-      <div class="cert-row">
-        <a href="https://www.redhat.com/rhtapps/services/certifications/badge/verify/BWRR5QJTLZRI3EX2MT4DL3BOAMAEQU3CUPSQX2KSDXT6RW46LQ3T7ULZ55KZZ56SKO7EQ3ETTLYZQ4U5NQYTCNA62RUWOCM34WWBUYQ=" target="_blank">
-          <img class="rhcsa-img" src="images/rhcsa.png" alt="RHCSA Certificate">
-        </a>
-        <h3>RHCSA</h3>
-        <p>Red Hat Certified System Administrator</p>
-      </div>
-      <div class="cert-row">
-        <a href="https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2019-12-12&ci=AWS01186322" target="_blank">
-          <img class="aws-img" src="images/aws-badge.png" alt="aws Solution Architect Associate">
-        </a>
-        <h3>aws</h3>
-        <p>Solution Architect Associate</p>
       </div>
     </div>
-    <hr>
-
-    <div class="skills">
-      <h2>Skills</h2>
-      <div class="skill-row">
-        <img class="skill-img" src="images/linux.png" alt="Linux image">
-        <h4>Linux</h4>
-        <div class="bar-container">
-          <div class="bar-linux"></div>
-        </div>
-      </div>
-      <div class="skill-row">
-        <img class="skill-img" src="images/shell-script.png" alt="shell script image">
-        <h4>Shell script</h4>
-        <div class="bar-container">
-          <div class="bar-script"></div>
-        </div>
-      </div>
-      <div class="skill-row">
-        <img class="skill-img" src="images/python.png" alt="python image">
-        <h4>Python</h4>
-        <div class="bar-container">
-          <div class="bar-python"></div>
-        </div>
-      </div>
-      <div class="skill-row">
-        <img class="skill-img" src="images/development.png" alt="development image">
-        <h4>Web Development</h4>
-        <div class="bar-container">
-          <div class="bar-webdev"></div>
-        </div>
-      </div>
+    <div class="bottom-container">
+      <p class="attribution">Icons made by Freepik from www.flaticon.com</p>
+      <p class="copyright">© 2025 Min-Haw, Liu.</p>
     </div>
-    <hr>
-
-    <div class="community">
-      <h2>Follow Me</h2>
-      <a href="https://github.com/liuminhaw" target="_blank">
-        <img class="community-img" src="images/github.png" alt="github image">
-      </a>
-      <h3>GitHub</h3>
-    </div>
-
-  </div>
-  <div class="bottom-container">
-    <p class="attribution">Icons made by Freepik from www.flaticon.com</p>
-    <p class="copyright">© 2020 Min-Haw, Liu.</p>
-  </div>
-
-</body>
-
+  </body>
 </html>
+
